@@ -8,20 +8,20 @@ import jm.task.core.jdbc.util.Util;
 public class Main {
     public static void main(String[] args) {
         // реализуйте алгоритм здесь
-        UserService user = new UserServiceImpl();
+        UserService userService = new UserServiceImpl();
 
-        user.createUsersTable();
-        user.saveUser("Flea", "Flea", (byte)29);
-        user.saveUser("Anthony", "Kiedis", (byte)27);
-        user.saveUser("John", "Frusciante", (byte)27);
-        user.saveUser("Chad", "Smith", (byte)29);
+        userService.createUsersTable();
+        userService.saveUser("Flea", "Flea", (byte)29);
+        userService.saveUser("Anthony", "Kiedis", (byte)27);
+        userService.saveUser("John", "Frusciante", (byte)27);
+        userService.saveUser("Chad", "Smith", (byte)29);
 
-        for (int i = 0; i < user.getAllUsers().size(); i++) {
-            System.out.println(user.getAllUsers().get(i));
+        for (int i = 0; i < userService.getAllUsers().size(); i++) {
+            System.out.println(userService.getAllUsers().get(i));
         }
 
-        user.cleanUsersTable();
-        user.dropUsersTable();
+        userService.cleanUsersTable();
+        userService.dropUsersTable();
 
 
     }
